@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dai Alif & Ikke - Wedding Invitation</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #4b1719;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(140, 40, 45, 0.7), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(20, 70, 40, 0.5), transparent 40%);
+  z-index: -1;
+}
+
+/* COVER */
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+}
+
+.cover-box {
+  width: 100%;
+  max-width: 500px;
+  min-height: 620px;
+  padding: 45px 25px;
+  border-radius: 30px;
+  background: rgba(255, 248, 238, 0.94);
+  color: #4b1719;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.flower {
+  position: absolute;
+  font-size: 70px;
+  opacity: 0.9;
+}
+
+.f1 {
+  top: -10px;
+  left: -10px;
+}
+
+.f2 {
+  top: -10px;
+  right: -10px;
+}
+
+.f3 {
+  bottom: -15px;
+  left: -10px;
+}
+
+.f4 {
+  bottom: -15px;
+  right: -10px;
+}
+
+.small-title {
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-top: 80px;
+  color: #8d3439;
+}
+
+.cover h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px;
+  font-weight: normal;
+  margin-top: 25px;
+  line-height: 1.1;
+}
+
+.cover h1 span {
+  display: block;
+}
+
+.and {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.cover-date {
+  margin-top: 35px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #6b292d;
+}
+
+.open-btn {
+  margin-top: 45px;
+  border: none;
+  background: #7d252c;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(100,30,35,0.3);
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  display: none;
+}
+
+.section {
+  padding: 70px 22px;
+  text-align: center;
+  position: relative;
+}
+
+.light {
+  background: #fff8ef;
+  color: #4b1719;
+}
+
+.dark {
+  background: linear-gradient(135deg, #4b1719, #6f2227);
+}
+
+.section-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 55px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.text {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* ORNAMEN */
+
+.leaves {
+  font-size: 35px;
+  letter-spacing: 8px;
+  margin-bottom: 15px;
+}
+
+/* MEMPELAI */
+
+.couple-card {
+  max-width: 500px;
+  margin: 35px auto;
+  padding: 30px 20px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 10px 30px rgba(80,20,20,0.12);
+}
+
+/* FOTO MEMPELAI */
+
+.photo-placeholder {
+  width: 190px;
+  height: 250px;
+  margin: 0 auto 25px;
+  border-radius: 100px 100px 25px 25px;
+  overflow: hidden;
+  background: #7d252c;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.couple-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 45px;
+  font-weight: normal;
+  color: #6e2025;
+}
+
+.parent {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 8px;
+  color: #4d3a35;
+}
+
+/* ACARA */
+
+.event-box {
+  max-width: 520px;
+  margin: 30px auto;
+  padding: 35px 20px;
+  border-radius: 25px;
+  background: #fff8ef;
+  color: #4b1719;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.event-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.date-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+  line-height: 1;
+  color: #7d252c;
+}
+
+.date-month {
+  letter-spacing: 5px;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.event-info {
+  margin-top: 25px;
+  line-height: 2;
+  font-size: 14px;
+}
+
+/* MAP */
+
+.map-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: #7d252c;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* GALLERY */
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  max-width: 500px;
+  margin: 30px auto 0;
+}
+
+.gallery-photo {
+  height: 400px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #6e2025;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* PENUTUP */
+
+.closing {
+  background: #fff8ef;
+  color: #4b1719;
+}
+
+.closing h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 55px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.family {
+  margin-top: 35px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.final-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 55px;
+  margin-top: 25px;
+}
+
+/* MUSIC BUTTON */
+
+.music-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: #7d252c;
+  color: white;
+  font-size: 22px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  z-index: 100;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+  }
+
+  .gallery-photo {
+    height: 350px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- COVER -->
+
+<section class="cover" id="cover">
+
+  <div class="cover-box">
+
+    <div class="flower f1">🌹🌿</div>
+    <div class="flower f2">🌿🌹</div>
+    <div class="flower f3">🌿🌹</div>
+    <div class="flower f4">🌹🌿</div>
+
+    <p class="small-title">THE WEDDING OF</p>
+
+    <h1>
+      <span>Dai Alif Ansor</span>
+      <div class="and">&</div>
+      <span>Ikke Sundari</span>
+    </h1>
+
+    <p class="cover-date">
+      Minggu, 13 September 2026
+    </p>
+
+    <button class="open-btn" onclick="openInvitation()">
+      Buka Undangan 💌
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<div class="main-content" id="mainContent">
+
+
+  <!-- PEMBUKAAN -->
+
+  <section class="section dark">
+
+    <div class="leaves">🌿 🌹 🌿</div>
+
+    <h2 class="section-title">
+      Assalamu'alaikum
+    </h2>
+
+    <p class="text">
+      Dengan memohon rahmat dan ridho Allah SWT,
+      kami bermaksud mengundang Bapak/Ibu/Saudara/i
+      untuk hadir dalam acara pernikahan kami.
+    </p>
+
+  </section>
+
+
+  <!-- MEMPELAI -->
+
+  <section class="section light">
+
+    <div class="leaves">🌹 🌿 🌹</div>
+
+    <h2 class="section-title">
+      Mempelai
+    </h2>
+
+
+    <!-- PRIA -->
+
+    <div class="couple-card">
+
+      <div class="photo-placeholder">
+        <img src="images/IMG_20260903_112333.jpg" alt="Dai Alif">
+      </div>
+
+      <h3 class="couple-name">
+        Dai Alif Ansor Rambe
+      </h3>
+
+      <p class="parent">
+        Putra dari<br>
+        <b>Bapak H. Maulana Rambe</b><br>
+        &<br>
+        <b>Hj. Siti Oloan</b>
+      </p>
+
+    </div>
+
+
+    <div style="font-size:35px; color:#7d252c;">
+      ♡
+    </div>
+
+
+    <!-- WANITA -->
+
+    <div class="couple-card">
+
+      <div class="photo-placeholder">
+        <img src="images/IMG_20260903_112423.jpg" alt="Ikke Sundari">
+      </div>
+
+      <h3 class="couple-name">
+        Ikke Sundari
+      </h3>
+
+      <p class="parent">
+        Putri dari<br>
+        <b>Bapak Sarman</b><br>
+        &<br>
+        <b>Ibu Suriyati</b>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ACARA -->
+
+  <section class="section dark">
+
+    <div class="leaves">🌿 🌹 🌿</div>
+
+    <h2 class="section-title">
+      Save The Date
+    </h2>
+
+    <div class="event-box">
+
+      <h3 class="event-name">
+        NGUNDUH MANTU
+      </h3>
+
+      <p>MINGGU</p>
+
+      <div class="date-number">
+        13
+      </div>
+
+      <div class="date-month">
+        SEPTEMBER 2026
+      </div>
+
+      <div class="event-info">
+
+        <p>
+          🕘 <b>Pukul</b><br>
+          09.00 WIB - Selesai
+        </p>
+
+        <br>
+
+        <p>
+          📍 <b>Bertempat di Kediaman Mempelai Pria</b><br>
+          Simpang Dinamit, Sukaramai
+        </p>
+
+        <a
+          class="map-btn"
+          href="https://maps.app.goo.gl/KrzVhhfaF4GfzvyC8?g_st=ac"
+          target="_blank">
+
+          📍 Buka Google Maps
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALERI -->
+
+  <section class="section light">
+
+    <div class="leaves">🌹 🌿 🌹</div>
+
+    <h2 class="section-title">
+      Our Moments
+    </h2>
+
+    <p class="section-subtitle">
+      Dai Alif & Ikke
+    </p>
+
+    <div class="gallery">
+
+      <div class="gallery-photo">
+        <img src="images/IMG_9618.JPG" alt="Dai Alif dan Ikke">
+      </div>
+
+      <div class="gallery-photo">
+        <img src="images/IMG_9658.JPG" alt="Dai Alif dan Ikke">
+      </div>
+
+      <div class="gallery-photo">
+        <img src="images/IMG_9667.JPG" alt="Dai Alif dan Ikke">
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PENUTUP -->
+
+  <section class="section closing">
+
+    <div class="leaves">🌿 🌹 🌿</div>
+
+    <h2>
+      Terima Kasih
+    </h2>
+
+    <p class="text">
+      Merupakan suatu kehormatan dan kebahagiaan bagi kami
+      apabila Bapak/Ibu/Saudara/i berkenan hadir
+      untuk memberikan doa dan restu kepada kedua mempelai.
+    </p>
+
+    <p class="text" style="margin-top:25px;">
+      Wassalamu'alaikum Warahmatullahi Wabarakatuh
+    </p>
+
+    <div class="family">
+
+      <b>Keluarga yang berbahagia</b>
+
+      <br><br>
+
+      Kel. Bapak H. Maulana Rambe & Hj. Siti Oloan
+
+      <br>
+
+      Kel. Bapak Sarman & Ibu Suriyati
+
+    </div>
+
+    <div class="final-name">
+      Alif & Ikke
+    </div>
+
+  </section>
+
+</div>
+
+
+<!-- MUSIC BUTTON -->
+
+<button class="music-btn" onclick="musicInfo()">
+  🎵
+</button>
+
+
+<script>
+
+function openInvitation() {
+
+  document.getElementById("cover").style.display = "none";
+
+  document.getElementById("mainContent").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+function musicInfo() {
+
+  alert("🎵 Lagu: Pernikahan Kita - Arsy Widianto & Tiara Andini");
+
+}
+
+</script>
+
+</body>
+</html>
