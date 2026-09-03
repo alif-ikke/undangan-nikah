@@ -614,9 +614,15 @@ body::before {
 </div>
 
 
+<!-- MUSIC -->
+
+<audio id="music" loop>
+  <source src="musik.mp3" type="audio/mpeg">
+</audio>
+
 <!-- MUSIC BUTTON -->
 
-<button class="music-btn" onclick="musicInfo()">
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
   🎵
 </button>
 
@@ -629,6 +635,10 @@ function openInvitation() {
 
   document.getElementById("mainContent").style.display = "block";
 
+  const music = document.getElementById("music");
+
+  music.play();
+
   window.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -636,13 +646,21 @@ function openInvitation() {
 
 }
 
-function musicInfo() {
+function toggleMusic() {
 
-  alert("🎵 Lagu: Pernikahan Kita - Arsy Widianto & Tiara Andini");
+  const music = document.getElementById("music");
+  const button = document.getElementById("musicBtn");
+
+  if (music.paused) {
+    music.play();
+    button.innerHTML = "🎵";
+  } else {
+    music.pause();
+    button.innerHTML = "🔇";
+  }
 
 }
 
 </script>
-
 </body>
 </html>
